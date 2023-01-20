@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
-// import { AddData } from ".../Redux/Action";
+
 import MailCard from "./MailCard";
 import { AddData } from "../Redux/Action";
 const Main = () => {
@@ -17,7 +17,7 @@ const Main = () => {
       .then((res) => res.json())
       .then((res) => {
         dispatch(AddData(res.list));
-        //  console.log(res.list);
+
       });
   }, []);
 
