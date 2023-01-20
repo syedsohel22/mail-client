@@ -1,8 +1,14 @@
 import "../Styles/mailCard.css";
 
-const MailCard = ({ date, email, name, id, subject, short_description }) => {
-
-
+const MailCard = ({
+  date,
+  email,
+  name,
+  id,
+  subject,
+  short_description,
+  handleClick,
+}) => {
   const avatar = name[0];
   let time = date;
   let mydate = new Date(time);
@@ -13,7 +19,7 @@ const MailCard = ({ date, email, name, id, subject, short_description }) => {
   // let hh=time.toLocaleTimeString('en-US')
 
   return (
-    <div key={id} className="mail-card">
+    <div key={id} className="mail-card" onClick={() => handleClick(id)}>
       <div className="avatar-box">
         <div className="avatar">{avatar}</div>
       </div>
