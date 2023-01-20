@@ -1,7 +1,7 @@
 import "../Styles/mailCard.css";
 
 const MailCard = ({ date, email, name, id, subject, short_description }) => {
-  //console.log(id);
+
 
   const avatar = name[0];
   let time = date;
